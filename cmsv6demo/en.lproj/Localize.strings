@@ -1,0 +1,417 @@
+/* 
+  Localize.strings
+  cmsv6demo
+
+  Created by tongtianxing on 2018/11/26.
+  Copyright © 2018年 Apple. All rights reserved.
+*/
+/*
+ Localizable.strings
+ cmsv6
+ 
+ Created by Apple on 13-3-27.
+ Copyright (c) 2013年 babelstar. All rights reserved.
+ */
+"check_all"="Select all";
+"colon"=":";
+"second"="Second";
+"minute"="Minute";
+
+"min_day" = "D";
+"min_hour" = "H";
+"min_minute" = "M";
+"min_second" = "S";
+
+"labelTime"="Time:";
+"labelSpeed"="Speed:";
+"labelLicheng"="Mileage:";
+"labelAlarm"="Alarm:";
+"labelTemperature" = "Temperature:";
+"labelStatus"="Status:";
+"labelAddress"="Address:";
+"labelDriver"="Driver:";
+"speed_kmPerHour"="KM/H";
+"speed_labelKmPerHour"="(KM/H)";
+"licheng_labelKM"="(KM)";
+"gpsUnvalid"="GPS Unvalid";
+"accOpen"="ACC On";
+"accClose"="ACC Off";
+"turnLeft"="TurnLeft";
+"turnRight"="TurnRight";
+"brake"="Brake";
+"turnPositive"="Positive";
+"turnReserve"="Reversal";
+"gpsAntennaNormal"="GPS Module Normal";
+"gpsAntennaUnvalid"="GPS Module No Exist";
+"disk"="Disk";
+"disk1"="Disk 1";
+"disk2"="Disk 2";
+"diskNormal"="Normal";
+"diskNoExist"="No Exist";
+"diskNoElec"="No Elec";
+"netSimNoExist"="SIM No Exist";
+"netClose"="Wireless Close";
+"netNoExist"="Wireless No Exist";
+"netPoor"="Network Signal Poor";
+"netNormal"="Network Signal Normal";
+"netGood"="Network Signal Good";
+"netExcellent"="Network Signal Excellent";
+"still"="Static";
+"parkAccon"="Idle";
+"overSpeed"="Overspeed";
+"lowSpeed" = "Lowspeed";
+"ok"="Ok";
+"cancel"="Cancel";
+"select"="Select";
+"menu_settings"="Settings";
+"login_login"="Login";
+"login_pwd"="Password";
+"login_account"="Account";
+"login_save_pwd"="Remember";
+"login_auto_login"="Auto Login";
+"login_server"="Server";
+"login_account_empty"="Account can not be empty!";
+"login_pwd_empty"="Password can not be empty!";
+"login_server_empty"="The server must not be empty!";
+"splash_logining"="Logging In...";
+"splash_loading"="Loading...";
+"splash_loading_failed"="Failed to load information";
+"splash_login_failed"="Login failed";
+"splash_login_user_error"="Username does not exist";
+"splash_login_pwd_error"="Password is incorrect";
+"splash_login_user_expired"="The user account has expired";
+"splash_login_address_error"="The server address is wrong";
+"splash_login_exception"="Exception";
+"splash_login_cert_unvalid"="Invalid certificate";
+"splash_login_server_error"="Connect to the server failed! Tip: server address is the IP:Web Port";
+"splash_login_server_no_support"="The server does not support mobile client";
+"splash_login_abnormal_account"="Account Error";
+"splash_login_disk_full"="Server Disk Full";
+"splash_login_device_registration_not_match"="Server registrations does not match";
+"splash_loginsingle_click_log_in_elsewhere"="User has logged in elsewhere";
+"splash_down_failed"="Download Failed";
+"splash_down_failed_tip"="Failed to download the upgrade file!";
+"update_title"="Software Update";
+"update_date"="Updated:";
+"update_new_ver"="New version:";
+"update_update"="Update";
+"update_next"="Cancel";
+"update_downing"="Downing";
+"update_wait"="Wait...";
+"device_search"="Search";
+"device_search_online"="Search Online";
+"device_list_title"="Terminals";
+"devlist_loading"="Loading termnials information, please wait&#8230;";
+"devlist_load_failed"="Failed to get terminals information";
+"devlist_menu_map"="Map";
+"devlist_menu_video"="Video";
+"devlist_menu_track"="Track";
+"devlist_menu_tip"="Please Select Menu";
+"devlist_select"="Terminal";
+"devlist_all"="All";
+"devlist_online"="Online";
+"devlist_select_online_tip"="Please select online terminal!";
+"devlist_select_tip"="Please select terminal!";
+"map_title"="Monitor";
+"map_device_label_status"="Status:";
+"map_flash"="Seconds";
+"map_flashing"="Refreshing";
+"map_select_flash_interval"="Select The Refresh Interval";
+"gps_licheng_unit_km"="KM";
+"gps_licheng_unit_mile"="MILE";
+"gps_north"="North";
+"gps_northEast"="Notheast";
+"gps_east"="East";
+"gps_southEast"="Southeast";
+"gps_south"="South";
+"gps_southWest"="Southwest";
+"gps_west"="West";
+"gps_northWest"="Northwest";
+"gps_normal"="Normal";
+"gps_alarm"="Alarm";
+"gps_offline"="Offline";
+"gps_idle"="Idle";
+"toolbar_terminal"="Terminal";
+"toolbar_monitor"="Map";
+"toolbar_video"="Video";
+"toolbar_track"="Track";
+"toolbar_message"="Message";
+
+"toolbar_playback"="Playback";
+"toolbar_setting"="Setting";
+"tip_next_version"="The next version of the video preview function";
+"setting_title"="Setting";
+"setting_account"="User";
+"setting_logout"="Sign Out";
+"setting_gpsfix"="GPS Fix";
+"setting_speed_unit"="Speed Unit";
+"setting_geo_address"="Geo Address";
+"setting_version"="Version";
+"setting_version_date"="Date:";
+"setting_version_ver"="Ver:";
+"speed_unit_title"="Speed Unit";
+"speed_unit_km"="KM/H";
+"speed_unit_mile"="MPH";
+"preview_title"="Preview";
+"search"="Search";
+"person_name" = "Name:";
+"person_sex"="Sex:";
+"person_tele"="Tel:";
+"person_idno"="IDNO.:";
+"person_post"="Post:";
+"person_address"="Address:";
+"person_position"="Position:";
+"person_remark"="Remarks:";
+"labelLinkman"="Contacts:";
+"male"="Male";
+"female"="Female";
+"post_caption"="Caption";
+"post_member"="Member";
+"exit_title"="Tips";
+"exit_tip"="Do you want to quit?";
+"preview_toolbar_ptz"="PTZ";
+"preview_toolbar_capture"="Capture";
+"preview_toolbar_record"="Record";
+"preview_toolbar_stop"="Stop";
+"preview_toolbar_sound"="Sound";
+"preview_offline_tip"="Terminal is offline, can not preview the video!";
+"preview_loadinng"="Loading";
+"preview_capture_save"="Capture success, pictures saved in album";
+"preview_record_save"="Video stored on the memory card: ";
+"preview_focus_not_viewing_tip"="Video is not in focus!";
+"preview_not_viewing_tip"="No input video!";
+"alarm_fence_in"="Into Fence";
+"alarm_fence_out"="Leave Fence";
+"alarm_fence_in_overspeed"="Overspeed Within Fence";
+"alarm_fence_out_overspeed"="Overspeed Outside Fence";
+"alarm_fence_in_lowspeed"="Low-Speed Within Fence";
+"alarm_fence_out_lowspeed"="Low-Speed Outside Fence";
+"alarm_fence_in_stop"="Parking Within Fence";
+"alarm_fence_out_stop"="Parking Outside Fence";
+"alarm_flow_day_remind"="Daily Flow Warning";
+"alarm_flow_day_over"="Daily Flow Exceed";
+"alarm_flow_month_remind"="Month Flow Warning";
+"alarm_flow_month_over"="Month Flow Exceed";
+"no_privi"="Do not have permission!";
+"track_select_time"="Select Date";
+"track_begin_time"="Begin Time";
+"track_end_time"="End Time";
+"track_time_error"="Begin time should not greater than end time!";
+"track_time_range_error"="Inquiry period not more than 3 hours!";
+"playback_tip_text"="Please click on the search button";
+"playback_file_location"="Location";
+"playback_file_location_disk"="Terminal Disk";
+"playback_channel"="Channel";
+"playback_channel_all"="All";
+"playback_video_type"="Video Type";
+"playback_video_type_normal"="Conventional";
+"playback_video_type_alarm"="Alarm";
+"playback_search_finish_empty"="Can't find video";
+"playback_search_fail"="Search failure";
+
+"playback_medium_type"="Media Type";
+"playback_audio_and_video"="Audio and video";
+"playback_audio"="Audio";
+"playback_video"="Video";
+"playback_video_or_audio_and_video"="Video or audio and video";
+"playback_stream_type"="Stream Type";
+"playback_stream_main"="Main-Stream";
+"playback_stream_sub"="Sub-Stream";
+"playback_store_type"="Store Type";
+"playback_store_main"="Main";
+"playback_store_disaster"="Disaster rec";
+"playback_alarm_type"="Alarm Type";
+
+"track_finished"="Track playback is completed";
+"querying"="Querying...";
+"query_failed"="Query track failed!";
+"query_null"="Tracks is empty";
+"play"="Play";
+"stop"="Stop";
+"monitor_center"="Monitor Center";
+"devsearch_title"="Find Device";
+"devsearch_ing"="Finding, please wait";
+"devsearch_null"="Cannot find device";
+"device_live"="Real Video";
+"device_setting"="Setting";
+"devsearch_btn"="Find";
+"map_dev_count"="Map shows vehicles";
+"labelOil"="Oil:";
+"labelTemperature"="Temperature:";
+"toolbar_manage"="Manage";
+"setting_private"="Privacy Statement";
+"setting_privacy_info"="User rights:\r\nAfter the installation is complete and successfully logged in, the user can use the app related functions.\r\nThe principle of privacy protection:\r\nWe will strictly manage and protect the information provided by the user, use the appropriate technology to prevent your personal information is lost, stolen or tampered with, without your permissionBefore, will not provide any of your personal information to an unrelated third party (including company or individual).\r\nDisclaimer:\r\n1:You agree to disclose your personal information and enjoy the products and services for you.\r\n2:Due to hacking behavior or the user is custody of the account,the password was illegally used by others.\r\nIf you have any questions or suggestions regarding this privacy policy, please contact us at support@g-sky.cn and we will do our best to protect your privacy.";
+
+
+
+
+"net_alarm_type_sb_l1_fcw" = "Forward Collision Alarm Level One";
+"net_alarm_type_sb_l2_fcw" = "Forward Collision Alarm Level Two";
+"net_alarm_type_sb_l1_ldw" = "Lane Deviation Alarm Level One";
+"net_alarm_type_sb_l2_ldw" = "Lane Deviation Alarm Level Two";
+"net_alarm_type_sb_l1_near_car" = "Car Distance Near Alarm Level One";
+"net_alarm_type_sb_l2_near_car" = "Car Distance Near Alarm Level Two";
+"net_alarm_type_sb_l1_hit_pedestrian" = "Pedestrian Collision Alarm Level One";
+"net_alarm_type_sb_l2_hit_pedestrian" = "Pedestrian Collision Alarm Level Two";
+"net_alarm_type_sb_l1_frequent_lane_change" = "Frequent Lane Change Level One";
+"net_alarm_type_sb_l2_frequent_lane_change" = "Frequent Lane Change Level Two";
+"net_alarm_type_sb_l1_road_marking_over_limit" = "Road Sign Overrun Alarm Level One";
+"net_alarm_type_sb_l2_road_marking_over_limit" = "Road Sign Overrun Alarm Level Two";
+"net_alarm_type_sb_l1_obstacle" = "Obstacle Alarm Level One";
+"net_alarm_type_sb_l2_obstacle" = "Obstacle Alarm Level Two";
+"net_alarm_type_sb_l1_fatigue_driving" = "Fatigue Driving Alarm Level One";
+"net_alarm_type_sb_l2_fatigue_driving" = "Fatigue Driving Alarm Level Two";
+"net_alarm_type_sb_l1_answer_the_call" = "Call to Call The Alarm Level One";
+"net_alarm_type_sb_l2_answer_the_call" = "Call to Call The Alarm Level Two";
+"net_alarm_type_sb_l1_smoking" = "Smoking Alarm Level One";
+"net_alarm_type_sb_l2_smoking" = "Smoking Alarm Level Two";
+"net_alarm_type_sb_l1_distracted_driving" = "Distracted Driving Alarm Level One";
+"net_alarm_type_sb_l2_distracted_driving" = "Distracted Driving Alarm Level Two";
+"net_alarm_type_sb_l1_driver_abnormal" = "Driver Abnormal Alarm Level One";
+"net_alarm_type_sb_l2_driver_abnormal" = "Driver Abnormal Alarm Level Two";
+"net_alarm_type_sb_tpms" = "Tire Pressure Alarm";
+"net_alarm_type_sb_rear_proximity" = "Rear Approach Alarm";
+"net_alarm_type_sb_rear_left_close" = "Approach Alarm On The Left Rear";
+"net_alarm_type_sb_rear_right_close" = "Right Rear Close Alarm";
+
+"impacting_pedestrians" = "Impacting Pedestrians";
+"report_frequent" = "Frequent Variation";
+"overspeed_signs" = "Overrun Alarm For Road Signs";
+"report_activeCapture" = "Active Snapshot Event";
+"report_obstacle" = "Barrier Alarm";
+"report_signsRecognition" = "Road Sign Identification Event";
+"report_autoCapture" = "Automatic Capture Event";
+"report_driverChange" = "Driver Change Event";
+"report_approach" = "Rear Proximity Alarm";
+"right_rear" = "Right Rear Proximity Alarm";
+"left_rear" = "Left Rear Proximity Alarm";
+"reportInfo_grade" = "Alarm level:";
+"reportInfo_roadSigns" = "Road sign identification data:";
+"reportInfo_vehicleSpeed" = "Front car speed:";
+"reportInfo_people" = "Car / pedestrian distance:";
+"reportInfo_deviate" = "Deviation type:";
+"reportInfo_roadSignsType" = "Road sign recognition type:";
+"reportInfo_distraction" = "Distracting Driving";
+"reportInfo_abnormality" = "Driver Abnormality";
+"tire_alarm" = "Tire Pressure Alarm(ADAS)";
+"reportInfo_sensor" = "Sensor number:";
+"reportInfo_temperature" = "Current temperature:";
+"reportInfo_tire" = "Current tire pressure:";
+"reportInfo_power" = "Current voltage:";
+"reportInfo_tpmsType" = "TPMS alarm type:";
+"reportInfo_batteryLevel" = "Battery power:";
+
+"deviation_left"  = "Left Deviation";
+"deviation_right" = "Right Deviation";
+"signs_speed" = "Speed Limit Sign";
+"signs_height" = "High Limit Sign";
+"signs_weight" = "Weight Limit Sign";
+
+"other_device_error" = "Other video equipment failure";
+"record_threshold" = "Record threshold";
+
+"fatigue_driving" ="Fatigue Degree ";
+
+"alarmSource_platform" = "Platform";
+
+"alarm_type_night_overSpeed_platform" = "Night Overspeed Alarm(platform)";
+"alarm_type_rapidAcceleration" = "Rapid Acceleration";
+"alarm_type_rapidDeceleration" = "Rapid Deceleration";
+"alarm_type_stop_status" = "Outage";
+"alarm_type_run_status" = "Operations";
+"alarm_type_encipher" = "Coordinates Encrypted";
+"alarm_type_not_encipher" = "Coordinates Unencrypted";
+"alarm_type_oil_normal" = "Normal Fuel Passage";
+"alarm_type_oil_off" = "Disconnect Fuel Passage";
+"alarm_type_electric_normal" = "Circuit Normal";
+"alarm_type_electric_off" = "Circuit Disconnect";
+"alarm_type_unlock" = "Door Unlocked";
+"alarm_type_lock" = "Door Locked";
+"alarm_type_mainSupplyUndervoltage"="Main Supply Undervoltage";
+"alarm_type_mainPowerFailure"="Main power Failure";
+
+"alarm_type_emergency_alarm" = "Emergency Alarm";
+"alarm_type_regionalSpeedingAlarm"="Area Overspeed Alarm";
+"alarm_type_fatigue" = "Fatigue Driving Alarm";
+"alarm_type_earlyWarning"="Pre-alarm";
+"alarm_type_GNSSModuleFailure"="GNSS Module Fault";
+"alarm_type_GNSSAntennaMissedOrCut"="GNSS Antenna Missed or Cut";
+"alarm_type_GNSSAntennaShort"="GNSS Antenna Short Circuit";
+"alarm_type_LCDorDisplayFailure"="LCD or Display Failure";
+"alarm_type_TTSModuleFailure"="TTS Module Fault";
+"alarm_type_cameraMalfunction"="Camera Fault";
+"alarm_type_cumulativeDayDrivingTimeout"="Day Cumulative Driving Timed Out";
+"alarm_type_overtimeParking"="Long Parking Time";
+"alarm_type_outOfRegional"="Out of Area";
+"alarm_type_outOfLine"="Out of Line";
+"alarm_type_InadequateOrTooLongRoadTravelTime"="Roads and The Lack of Time or Too Long";
+"alarm_type_routeDeviation"="oute Deviation";
+"alarm_type_VSSFailure"="VSS Failure";
+"alarm_type_abnormalFuel"="Fuel Exception";
+"alarm_type_antitheftDevice"="Stolen Vehicles";
+"alarm_type_illegalIgnition"="Illegal Fire Alarm";
+"alarm_type_illegalDisplacement"="Illegal Shift";
+"alarm_type_rollover"="Collision Rollover Alarm";
+"alarm_type_parkTooLong_platform" = "Timeout Parking (platform)";
+
+"alarm_type_lineOverSpeed_platform" = "Line Overspeed Alarm (platform)";
+"alarm_type_lineLowSpeed_platform" = "Line Low Speed Alarm (platform)";
+"alarm_type_areaOverSpeed_platform" = "Area Overspeed Alarm (platform)";
+"alarm_type_areaLowSpeed_platform" = "Regional Low-speed Alarm (platform)";
+"alarm_type_areaInOut_platform" = "Entry and Exit Area (platform)";
+"alarm_type_lineInOut_platform" = "Line Offset (platform)";
+"alarm_type_overSpeed_platform" = "Period Overspeed Alarm (platform)";
+"alarm_type_lowSpeed_platform" = "Period of Low Speed Alarm (platform)";
+"alarm_type_fatigue_platform" = "Fatigue Driving (platform)";
+
+"alarm_gps_sd" = "SD";
+"alarm_gps_disk" = "Disk";
+"alarm_gps_ssd" = "SSD";
+
+"alarm_type_io_high" = "High Voltage";
+
+"alarm_type_video_signal_loss" = "video signal loss alarm";//status1  0X0018
+"alarm_type_video_signal_blocking" = "video signal blocking alarm";//status2 0X0001
+"alarm_type_memory_cell_fault" = "memory cell fault alarm";
+"alarm_type_other_video_device_fault" = "other video device fault alarm";
+"alarm_type_abnormal_driving_behavior" = "abnormal driving behavior alarm";
+"special_alarm_type_video_to_storage_threshold" = "special alarm,video to the storage threshold alarm";
+
+
+"alarm_bus_overcrowding" = "Alarm Bus Overcrowding";
+
+
+"report_areaType_platform" = "Out Regional Alarm (platform)";
+"report_pointNoLeave_platform" = "Key Point  Not Leave Alarm (platform)";
+"report_pointNoArrive_platform" = "Key Point Not Arriving Alarm (platform)";
+
+"alarm_type_nightdriving" = "Night Driving Alarm (platform)";
+
+"report_roadLvlOverSpeed_platform" = "Road Class Overspeed Alarm (platform)";
+
+"repair" = "Repair";
+"deactivation" = "Disable";
+"arrears" = "Arrears";
+"dev_unused" = "Equipment has been discontinued";
+
+"service_period" = "Terminal service expiration";
+
+"monitor_video_status" = "Videos:";
+
+"alarm_type_video_lost_status" = "Video Lost";
+
+"message_delete_all" = "delete all messages";
+"no" = "no";
+"yes" = "yes";
+
+"message_description" = "description：";
+
+"time_just_now" = "just now";
+"time_minute_ago" = " minute ago";
+"time_hour_ago" = " hour ago";
+"time_day_ago" = " day ago";
+"time_month_ago" = " month ago";
+"time_year_ago" = " year ago";
+
+"platform_inspection" = "platform inspection";
+"alarm_supervisory" = "alarm supervisory";
