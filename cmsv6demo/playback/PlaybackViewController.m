@@ -114,7 +114,7 @@
      NSString *vehiId =_currentVehicle.nm;//车牌号
       NSString *deviceId  = model1.id2;//设备ID
       
-    [tsf onsearch:deviceId  vehiIdno:vehiId devChnCout:(int)model1.cc location:(int)_location.selectedSegmentIndex channel:(int)selectChannel type:(int)_videoType.selectedSegmentIndex-1 date:queryDate beginTime:nBeginTime endTime:nEndTime];
+        [tsf onsearch:deviceId  vehiIdno:vehiId vehiId:(int)_currentVehicle.id1 devChnCout:(int)model1.cc location:(int)_location.selectedSegmentIndex channel:(int)selectChannel type:(int)_videoType.selectedSegmentIndex-1 date:queryDate beginTime:nBeginTime endTime:nEndTime];
     }
 }
 
@@ -280,7 +280,7 @@ NSString* dateToString(NSDate* date)
        NSInteger chn = model.chn;
        for (NSInteger k = 0; k < chn; k++) {
            if ( (chnMask >> k) & 0x01 ) {
-               UIAlertAction *action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"CH%zi",k+1] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+               UIAlertAction *action = [UIAlertAction actionWithTitle:[NSString stringWithFormat:@"CH%li",k+1] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                    model.selectChn = k;
                    
                    TTXPlaybackVideoController *pbvVC = [[TTXPlaybackVideoController alloc]init];
