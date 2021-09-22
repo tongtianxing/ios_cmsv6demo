@@ -1,3 +1,10 @@
+20210922
+1.对讲音频优化
+2.ffmpeg更新到4.0.3,避免冲突需要自行添加依赖库
+
+20210818
+1.接受内容类型修改
+
 20200103
 1.优化sdk内存管理
 2.修复搜索和播放车牌号过长车辆存储服务器视频
@@ -12,6 +19,10 @@
 20190708  
 1.集成最新TTXSDK,完善接口说明文档
 2.缩减sdk的大小
+
+20210922
+1. Intercom audio optimization
+2. ffmpeg updated to 4.0.3, to avoid conflicts, you need to add dependent libraries by yourself
 
 20200103
 1. Optimize SDK memory management

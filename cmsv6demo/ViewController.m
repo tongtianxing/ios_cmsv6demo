@@ -637,7 +637,8 @@ _XCTRegisterFailure(_XCTFailureDescription(_XCTAssertion_True, 1, @#expression, 
         {
 //            [_video1 stopSound];
 //            [_video2 stopSound];
-           if([_talkback startTalkback:currentIdno])
+            EquipmentInfoModel *model1 = currentVehicle.dl[0];
+           if([_talkback startTalkback:currentIdno is1078:model1.is1078])
             {
                 [[iToast makeText:@"start talkback..."] show];
             }

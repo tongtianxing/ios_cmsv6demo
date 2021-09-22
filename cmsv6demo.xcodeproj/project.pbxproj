@@ -72,10 +72,17 @@
 		8D89FB2421AB8268007B2568 /* Localize.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D89FB2621AB8268007B2568 /* Localize.strings */; };
 		8DA26ED621B50AE600182CB9 /* LoginInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DA26ED521B50AE600182CB9 /* LoginInfo.plist */; };
 		8DA26ED921B5342B00182CB9 /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA26ED821B5342B00182CB9 /* Singleton.m */; };
-		8DAF5A0522BB18D300FA357D /* TTXSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAF5A0422BB18D300FA357D /* TTXSDK.framework */; };
 		8DAF5A0722BB193A00FA357D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAF5A0622BB193A00FA357D /* VideoToolbox.framework */; };
 		8DBF6BF922AF81000088316C /* DeviceSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF6BF722AF81000088316C /* DeviceSearchView.xib */; };
 		8DBF6BFA22AF81000088316C /* DeviceSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF6BF822AF81000088316C /* DeviceSearchView.m */; };
+		B687527026FAFA7F00B095ED /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526926FAFA7E00B095ED /* libavutil.a */; };
+		B687527126FAFA7F00B095ED /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526A26FAFA7E00B095ED /* libavfilter.a */; };
+		B687527226FAFA7F00B095ED /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526B26FAFA7E00B095ED /* libavcodec.a */; };
+		B687527326FAFA7F00B095ED /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526C26FAFA7E00B095ED /* libavformat.a */; };
+		B687527426FAFA7F00B095ED /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526D26FAFA7E00B095ED /* libavdevice.a */; };
+		B687527526FAFA7F00B095ED /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526E26FAFA7E00B095ED /* libswresample.a */; };
+		B687527626FAFA7F00B095ED /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526F26FAFA7E00B095ED /* libswscale.a */; };
+		B687529726FAFCFA00B095ED /* TTXSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B687529626FAFCFA00B095ED /* TTXSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,11 +194,18 @@
 		8DA26ED521B50AE600182CB9 /* LoginInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LoginInfo.plist; sourceTree = "<group>"; };
 		8DA26ED721B5342B00182CB9 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		8DA26ED821B5342B00182CB9 /* Singleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
-		8DAF5A0422BB18D300FA357D /* TTXSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTXSDK.framework; sourceTree = "<group>"; };
 		8DAF5A0622BB193A00FA357D /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		8DBF6BF622AF81000088316C /* DeviceSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSearchView.h; sourceTree = "<group>"; };
 		8DBF6BF722AF81000088316C /* DeviceSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceSearchView.xib; sourceTree = "<group>"; };
 		8DBF6BF822AF81000088316C /* DeviceSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSearchView.m; sourceTree = "<group>"; };
+		B687526926FAFA7E00B095ED /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
+		B687526A26FAFA7E00B095ED /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
+		B687526B26FAFA7E00B095ED /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
+		B687526C26FAFA7E00B095ED /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavformat.a; sourceTree = "<group>"; };
+		B687526D26FAFA7E00B095ED /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
+		B687526E26FAFA7E00B095ED /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
+		B687526F26FAFA7E00B095ED /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
+		B687529626FAFCFA00B095ED /* TTXSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTXSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,11 +213,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B687527626FAFA7F00B095ED /* libswscale.a in Frameworks */,
+				B687527426FAFA7F00B095ED /* libavdevice.a in Frameworks */,
+				B687527026FAFA7F00B095ED /* libavutil.a in Frameworks */,
 				8D326D1522C206D30020B8D3 /* libiconv.tbd in Frameworks */,
 				8D326D1322C2069D0020B8D3 /* libz.tbd in Frameworks */,
+				B687527126FAFA7F00B095ED /* libavfilter.a in Frameworks */,
 				8D326D1122C206590020B8D3 /* libc++.tbd in Frameworks */,
 				8DAF5A0722BB193A00FA357D /* VideoToolbox.framework in Frameworks */,
-				8DAF5A0522BB18D300FA357D /* TTXSDK.framework in Frameworks */,
+				B687527326FAFA7F00B095ED /* libavformat.a in Frameworks */,
+				B687527526FAFA7F00B095ED /* libswresample.a in Frameworks */,
+				B687529726FAFCFA00B095ED /* TTXSDK.framework in Frameworks */,
+				B687527226FAFA7F00B095ED /* libavcodec.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +252,8 @@
 		18912D0817FAB67600BEA969 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8DAF5A0422BB18D300FA357D /* TTXSDK.framework */,
 				8DAF5A0622BB193A00FA357D /* VideoToolbox.framework */,
+				B687529626FAFCFA00B095ED /* TTXSDK.framework */,
 				8D326D1222C2069D0020B8D3 /* libz.tbd */,
 				8D326D1022C206590020B8D3 /* libc++.tbd */,
 				8D326D1422C206D30020B8D3 /* libiconv.tbd */,
@@ -263,6 +284,7 @@
 				8DA26ED821B5342B00182CB9 /* Singleton.m */,
 				8DA26ED521B50AE600182CB9 /* LoginInfo.plist */,
 				18912D2417FAB67600BEA969 /* Images.xcassets */,
+				B687526726FAFA7E00B095ED /* ffmepg */,
 				18912D1017FAB67600BEA969 /* Supporting Files */,
 			);
 			path = cmsv6demo;
@@ -441,6 +463,28 @@
 			path = device;
 			sourceTree = "<group>";
 		};
+		B687526726FAFA7E00B095ED /* ffmepg */ = {
+			isa = PBXGroup;
+			children = (
+				B687526826FAFA7E00B095ED /* lib */,
+			);
+			path = ffmepg;
+			sourceTree = SOURCE_ROOT;
+		};
+		B687526826FAFA7E00B095ED /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B687526926FAFA7E00B095ED /* libavutil.a */,
+				B687526A26FAFA7E00B095ED /* libavfilter.a */,
+				B687526B26FAFA7E00B095ED /* libavcodec.a */,
+				B687526C26FAFA7E00B095ED /* libavformat.a */,
+				B687526D26FAFA7E00B095ED /* libavdevice.a */,
+				B687526E26FAFA7E00B095ED /* libswresample.a */,
+				B687526F26FAFA7E00B095ED /* libswscale.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -480,6 +524,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -705,6 +750,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -713,10 +759,12 @@
 				GCC_PREFIX_HEADER = "cmsv6demo/cmsv6demo-Prefix.pch";
 				INFOPLIST_FILE = "cmsv6demo/cmsv6demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/ffmepg/lib";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TTXSDK.framework/Headers\"";
+				VALID_ARCHS = "arm64 armv7 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -730,6 +778,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -738,10 +787,12 @@
 				GCC_PREFIX_HEADER = "cmsv6demo/cmsv6demo-Prefix.pch";
 				INFOPLIST_FILE = "cmsv6demo/cmsv6demo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/ffmepg/lib";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TTXSDK.framework/Headers\"";
+				VALID_ARCHS = "arm64 armv7 x86_64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

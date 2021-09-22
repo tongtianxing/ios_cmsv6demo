@@ -113,8 +113,15 @@
     EquipmentInfoModel *model1 = _currentVehicle.dl[0];
      NSString *vehiId =_currentVehicle.nm;//车牌号
       NSString *deviceId  = model1.id2;//设备ID
+        int vid = (int)_currentVehicle.id1;//车辆id
+        int cc = (int)model1.cc;
+        int location = (int)_location.selectedSegmentIndex;
+        int sc = (int)selectChannel;
+        int vt = (int)_videoType.selectedSegmentIndex-1;
       
-        [tsf onsearch:deviceId  vehiIdno:vehiId vehiId:(int)_currentVehicle.id1 devChnCout:(int)model1.cc location:(int)_location.selectedSegmentIndex channel:(int)selectChannel type:(int)_videoType.selectedSegmentIndex-1 date:queryDate beginTime:nBeginTime endTime:nEndTime];
+//        tsf onsearch:<#(NSString *)#> vehiIdno:<#(NSString *)#> devChnCout:<#(int)#> location:<#(int)#> channel:<#(int)#> type:<#(int)#> date:<#(NSString *)#> beginTime:<#(int)#> endTime:<#(NSInteger)#>
+        
+        [tsf onsearch:deviceId  vehiIdno:vehiId vehiId:vid devChnCout:cc location:location channel:sc type:vt date:queryDate beginTime:nBeginTime endTime:nEndTime];
     }
 }
 

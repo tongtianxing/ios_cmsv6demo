@@ -24,7 +24,7 @@ static TTXAccountManager *m = nil;
         if (m == nil) {
             m = [[TTXAccountManager alloc] init];
             m->manager = [AFHTTPSessionManager manager];
-            m->manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+            m->manager.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"text/html",@"application/json"]];
         }
     });
     return m;
