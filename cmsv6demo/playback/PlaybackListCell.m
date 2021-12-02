@@ -16,6 +16,9 @@
     UILabel *dateLabel;
     UILabel *timeLabel;
     UILabel *chFileTypeLabel;
+    UIButton *downloadButton;
+    
+    void(^mBlock)(void);
   
 }
 @end;
@@ -53,6 +56,11 @@
         chFileTypeLabel.text = @"CH1   ";
         [self.contentView addSubview:chFileTypeLabel];
         
+        downloadButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [downloadButton setTitle:@"download" forState:UIControlStateNormal];
+        downloadButton.frame = CGRectMake(CGRectGetMaxX(chFileTypeLabel.frame)+5, CGRectGetMaxY(timeLabel.frame)+10, 130, 25);
+        [downloadButton addTarget:self action:@selector(downloadButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        [self.contentView addSubview:downloadButton];
         if(!IS_IPHONE_6_OR_LATER)
         {
             dateLabel.font = [UIFont fontWithName:dateLabel.font.fontName size:14];
@@ -62,6 +70,18 @@
         }
     }
     return self;
+}
+
+-(void)downloadButtonClick
+{
+    if (mBlock) {
+        mBlock();
+    }
+}
+
+-(void)setDownloadButtonClick:(void(^)(void))block
+{
+    mBlock = block;
 }
 
 

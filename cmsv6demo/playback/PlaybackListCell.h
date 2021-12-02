@@ -11,5 +11,7 @@
 @interface PlaybackListCell : UITableViewCell
 -(void)setPlaybackListModel:(TTXPlaybackSearchModel*)model;
 
+-(void)setDownloadButtonClick:(void(^)(void))block;
+
 
 @end

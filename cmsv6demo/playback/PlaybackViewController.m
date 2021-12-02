@@ -14,8 +14,8 @@
 #import "TTXPlaybackSearch.h"
 #import "TTXPlaybackVideoController.h"
 #import "PlaybackListCell.h"
-
-
+#import "PBDownload.h"
+#import "TTXAccountManager.h"
 @interface PlaybackViewController ()<RMDateSelectionViewControllerDelegate,TTXPlaybackSearchDelegate,UITableViewDelegate,UITableViewDataSource>
 {
 
@@ -31,6 +31,7 @@
     
     NSArray *msearchList;
 
+    NSMutableArray *pbdArr;
 }
 @property (weak, nonatomic) IBOutlet UIButton *terminal;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *location;
@@ -138,6 +139,7 @@
 
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    selectTerminal = -1;
@@ -170,8 +172,68 @@
     endTime = [[ self datePickerToTime:dateEndTime ] copy];
     [_selectEnd setTitle:endTime forState:UIControlStateNormal];
     
+    [PBDownload setCacheDictKey:[NSString stringWithFormat:@"%@-%@",[TTXAccountManager shareManager].server,[TTXAccountManager shareManager].account]];
+    
+    pbdArr = [NSMutableArray array];
+    NSDictionary *dict = [PBDownload getCacheDict];
+    for (NSString *key in dict.allKeys) {
+        NSData *data = dict[key];
+        TTXPlaybackSearchModel *model = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        PBDownload *pbd = [PBDownload new];
+        [pbd configPBDownloadWithModel:model];
+        if([pbd renewUndoneDownloadWithModel:model]){
+            dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            [pbd downloadPlaybackWithModel:model hasUndone:YES];
+               
+            });
+        }
+        [pbdArr addObject:pbd];
+        [pbd setDownChangeBlock:^(BOOL finish) {
+            __weak PBDownload *weakPbd = pbd;
+            if (finish) {
+                
+            }else{
+                
+            }
+            NSLog(@"%@ %ld %ld",weakPbd.date,(long)weakPbd.down,(long)weakPbd.total);
+        }];
+    }
+        
+    
+    UIButton *btnBack = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 44, 44)];
+    [btnBack setTitle:@"back" forState:UIControlStateNormal];
+    [btnBack setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btnBack addTarget:self action:@selector(onBack:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *navLeftBtn = [[UIBarButtonItem alloc] initWithCustomView:btnBack];
+    self.navigationItem.leftBarButtonItem = navLeftBtn;
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivePbDownloadSuccess:) name:NSNotificationPbDownloadSuccess object:nil];
     // Do any additional setup after loading the view from its nib.
 }
+
+-(void)onBack:(id)obj{
+    if (pbdArr.count > 0) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"正在下载录像,是否暂停下载并退出." preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleCancel handler:nil]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            for (PBDownload *pbd in pbdArr) {
+                //[pbd stopDownload];
+                [pbd stopDownloadWithPause];
+            }
+            [self.navigationController popViewControllerAnimated:true];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else{
+        [self.navigationController popViewControllerAnimated:true];
+    }
+}
+
+
+
+
+
+
 
 -(void)onSelectDate:(NSString*)title pickerMode:(int)_mode date:(NSDate*)_date
 {
@@ -315,9 +377,68 @@ NSString* dateToString(NSDate* date)
     }
     TTXPlaybackSearchModel *model = msearchList[indexPath.row];
     [cell setPlaybackListModel:model];
+
+    [cell setDownloadButtonClick:^{
+        BOOL hasDownMission = false;
+        for (PBDownload *pbd in pbdArr) {
+            if ([pbd downloadMissionIsExist:model]) {
+                hasDownMission = true;
+            }
+            if (!hasDownMission) {
+                PBDownload *pbd = [PBDownload new];
+                [pbd configPBDownloadWithModel:model];
+                [pbd downloadPlaybackWithModel:model hasUndone:NO];
+                [pbdArr addObject:pbd];
+            }else{
+                NSLog(@"已经有相关下载任务");
+            }
+        }
+        PBDownload *pbd = [PBDownload new];
+        [pbd configPBDownloadWithModel:model];
+        [pbd downloadPlaybackWithModel:model hasUndone:NO];
+    }];
+
     
     return cell;
 }
+
+
+#pragma mark - 通知收到PBDownload下载成功返回
+-(void)receivePbDownloadSuccess:(NSNotification*)notifi
+{
+    PBDownload *pbd = notifi.object;
+    [self saveRecordToAlbum:pbd.fullPath];
+    [pbdArr removeObject:pbd];
+}
+-(void)saveRecordToAlbum:(NSString *)videoPath
+{
+    if(videoPath) {
+        //iphone7 ios11.0以上才支持h265
+        BOOL compatible = UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(videoPath);
+        if (compatible) {
+            UISaveVideoAtPathToSavedPhotosAlbum(videoPath, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
+        }else{
+            //删除损坏的
+            NSFileManager *fm = [NSFileManager defaultManager];
+            if([fm fileExistsAtPath:videoPath])
+                [fm removeItemAtPath:videoPath error:nil];
+        }
+    }
+}
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error) {
+        NSFileManager *fm = [NSFileManager defaultManager];
+        if([fm fileExistsAtPath:videoPath])
+            [fm removeItemAtPath:videoPath error:nil];
+    }else{
+        NSFileManager *fm = [NSFileManager defaultManager];
+        if([fm fileExistsAtPath:videoPath])
+            [fm removeItemAtPath:videoPath error:nil];
+    }
+}
+
+
 
 
 #pragma mark - TTXPlaybackSearchDelegate
@@ -326,7 +447,7 @@ NSString* dateToString(NSDate* date)
     NSLog(@"searchList = %@",searchList);
     EquipmentInfoModel *model1 = _currentVehicle.dl[0];
     [searchList enumerateObjectsUsingBlock:^(TTXPlaybackSearchModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.is1078 = model1.is1078;
+        obj.is1078type = model1.is1078;
     }];
     msearchList = searchList;
     [_searchList reloadData];

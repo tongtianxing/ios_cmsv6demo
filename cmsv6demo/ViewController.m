@@ -78,6 +78,7 @@
 @property (nonatomic , strong)UIButton *playback;
 
 @property (nonatomic , strong)UIButton *device;
+
 @end
 
 @implementation ViewController
@@ -356,6 +357,8 @@ _XCTRegisterFailure(_XCTFailureDescription(_XCTAssertion_True, 1, @#expression, 
         make.height.mas_equalTo(soundSize.height);
     }];
     
+
+    
     _start = [UIButton buttonWithType:UIButtonTypeSystem];
     _start.layer.borderWidth = 1;
     [_start setTitle:@"start" forState:UIControlStateNormal];
@@ -575,6 +578,11 @@ _XCTRegisterFailure(_XCTFailureDescription(_XCTAssertion_True, 1, @#expression, 
         [_video2 playSound];
     }
 }
+
+
+
+
+
 -(void)startAndStop:(UIButton*)btn
 {
 
