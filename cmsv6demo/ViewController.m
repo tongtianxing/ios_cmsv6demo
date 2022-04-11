@@ -78,7 +78,6 @@
 @property (nonatomic , strong)UIButton *playback;
 
 @property (nonatomic , strong)UIButton *device;
-
 @end
 
 @implementation ViewController
@@ -357,8 +356,6 @@ _XCTRegisterFailure(_XCTFailureDescription(_XCTAssertion_True, 1, @#expression, 
         make.height.mas_equalTo(soundSize.height);
     }];
     
-
-    
     _start = [UIButton buttonWithType:UIButtonTypeSystem];
     _start.layer.borderWidth = 1;
     [_start setTitle:@"start" forState:UIControlStateNormal];
@@ -578,11 +575,6 @@ _XCTRegisterFailure(_XCTFailureDescription(_XCTAssertion_True, 1, @#expression, 
         [_video2 playSound];
     }
 }
-
-
-
-
-
 -(void)startAndStop:(UIButton*)btn
 {
 
@@ -643,9 +635,21 @@ _XCTRegisterFailure(_XCTFailureDescription(_XCTAssertion_True, 1, @#expression, 
     {
         if(![_talkback isTalkback])
         {
-//            [_video1 stopSound];
-//            [_video2 stopSound];
+
             EquipmentInfoModel *model1 = currentVehicle.dl[0];
+            [_talkback setTalkbackMsgCallback:^(int msg) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (msg == TB_STATUS_TABCK_ING) {
+                        [[iToast makeText:@"对讲中.."] show];
+                    }else if(msg == TB_STATUS_VOIP_DEV_USED_CNT){
+                        [[iToast makeText:@"对方正在对讲通话中..."] show];
+                    }else if(msg == TB_STATUS_VOIP_DEV_USED_CNT){
+                        [[iToast makeText:@"设备停止通话"] show];
+                    }else if(msg == TB_STATUS_MONITOR_REQUSTING){
+                        [[iToast makeText:@"请求中.. "] show];
+                    }
+                });
+            }];
            if([_talkback startTalkback:currentIdno is1078:model1.is1078])
             {
                 [[iToast makeText:@"start talkback..."] show];
