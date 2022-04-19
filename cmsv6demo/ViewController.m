@@ -63,6 +63,7 @@
 @property (nonatomic , strong)UIButton *stop;
 
 @property (nonatomic , strong)UIButton *record;
+@property (nonatomic , strong)UIButton *filmMode;
 
 @property (nonatomic , strong)UIButton *statTalk;
 @property (nonatomic , strong)UIButton *stopTalk;
@@ -392,6 +393,19 @@ _XCTRegisterFailure(_XCTFailureDescription(_XCTAssertion_True, 1, @#expression, 
         make.height.mas_equalTo(soundSize.height);
     }];
     
+    _filmMode  = [UIButton buttonWithType:UIButtonTypeSystem];
+    _filmMode.layer.borderWidth = 1;
+    [_filmMode setTitle:@"filmMode" forState:UIControlStateNormal];
+    [self.view addSubview:_filmMode];
+    [_filmMode addTarget:self action:@selector(filmModeChange:) forControlEvents:UIControlEventTouchUpInside];
+    [_filmMode mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_record.mas_top);
+        make.left.equalTo(_record.mas_right).offset(10);
+        make.width.mas_equalTo((soundSize.width+5));
+        make.height.mas_equalTo(soundSize.height);
+    }];
+    
+    
     UILabel *talkback = [UILabel new];
     talkback.text = @"talkback";
     CGSize labelSize = [talkback sizeThatFits:CGSizeMake(MainScreenWidth, MainScreenHeight)];
@@ -617,6 +631,18 @@ _XCTRegisterFailure(_XCTFailureDescription(_XCTAssertion_True, 1, @#expression, 
         }
     }
 }
+static int temp = -1;
+-(void)filmModeChange:(UIButton*)btn
+{
+    temp++;
+    if (temp > 3) {
+        temp = 0;
+    }
+    [_video1 setFilmMode: temp];
+}
+
+
+
 -(void)monitorClick:(UIButton *)btn
 {
     if(btn == _startMt){

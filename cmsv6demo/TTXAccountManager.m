@@ -55,6 +55,7 @@ static TTXAccountManager *m = nil;
     [str appendString: @"&password="];
     [str appendString:password];
     
+
     __weak typeof(self) weakSelf = self;
     [manager POST:str parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dict = responseObject;

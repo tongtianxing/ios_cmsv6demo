@@ -8,3 +8,11 @@ xcuserdata/
 UserInterface.xcuserstate
 *.DS_Store
 TTXSDK.framework
+ffmepg/lib/libavcodec.a
+ffmepg/lib/libavdevice.a
+ffmepg/lib/libavfilter.a
+ffmepg/lib/libavformat.a
+ffmepg/lib/libavutil.a
+ffmepg/lib/libswresample.a
+ffmepg/lib/libswscale.a
+TTXSDK/*

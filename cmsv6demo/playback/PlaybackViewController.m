@@ -32,6 +32,9 @@
     NSArray *msearchList;
 
     NSMutableArray *pbdArr;
+    
+    
+    TTXPlaybackSearch * tsf;
 }
 @property (weak, nonatomic) IBOutlet UIButton *terminal;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *location;
@@ -108,7 +111,7 @@
             [[iToast makeText:@"Begin time should not greater than end time!"] show];
             return ;
         }
-        TTXPlaybackSearch * tsf = [[TTXPlaybackSearch alloc]init];
+        tsf = [[TTXPlaybackSearch alloc]init];
         tsf.delegate = self;
 
     EquipmentInfoModel *model1 = _currentVehicle.dl[0];
@@ -137,6 +140,12 @@
         [self.terminal setTitle:_currentVehicle.nm forState:UIControlStateNormal];
     }
 
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    tsf.delegate = NULL;
 }
 
 

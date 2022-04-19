@@ -75,6 +75,7 @@
 		8DAF5A0722BB193A00FA357D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DAF5A0622BB193A00FA357D /* VideoToolbox.framework */; };
 		8DBF6BF922AF81000088316C /* DeviceSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF6BF722AF81000088316C /* DeviceSearchView.xib */; };
 		8DBF6BFA22AF81000088316C /* DeviceSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF6BF822AF81000088316C /* DeviceSearchView.m */; };
+		B64176A6280EB6EA007FFAA9 /* TTXSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64176A5280EB6EA007FFAA9 /* TTXSDK.framework */; };
 		B687527026FAFA7F00B095ED /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526926FAFA7E00B095ED /* libavutil.a */; };
 		B687527126FAFA7F00B095ED /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526A26FAFA7E00B095ED /* libavfilter.a */; };
 		B687527226FAFA7F00B095ED /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526B26FAFA7E00B095ED /* libavcodec.a */; };
@@ -82,7 +83,6 @@
 		B687527426FAFA7F00B095ED /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526D26FAFA7E00B095ED /* libavdevice.a */; };
 		B687527526FAFA7F00B095ED /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526E26FAFA7E00B095ED /* libswresample.a */; };
 		B687527626FAFA7F00B095ED /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B687526F26FAFA7E00B095ED /* libswscale.a */; };
-		B687529726FAFCFA00B095ED /* TTXSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B687529626FAFCFA00B095ED /* TTXSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -198,6 +198,7 @@
 		8DBF6BF622AF81000088316C /* DeviceSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSearchView.h; sourceTree = "<group>"; };
 		8DBF6BF722AF81000088316C /* DeviceSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceSearchView.xib; sourceTree = "<group>"; };
 		8DBF6BF822AF81000088316C /* DeviceSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSearchView.m; sourceTree = "<group>"; };
+		B64176A5280EB6EA007FFAA9 /* TTXSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTXSDK.framework; sourceTree = "<group>"; };
 		B687526926FAFA7E00B095ED /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavutil.a; sourceTree = "<group>"; };
 		B687526A26FAFA7E00B095ED /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavfilter.a; sourceTree = "<group>"; };
 		B687526B26FAFA7E00B095ED /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavcodec.a; sourceTree = "<group>"; };
@@ -205,7 +206,6 @@
 		B687526D26FAFA7E00B095ED /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libavdevice.a; sourceTree = "<group>"; };
 		B687526E26FAFA7E00B095ED /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswresample.a; sourceTree = "<group>"; };
 		B687526F26FAFA7E00B095ED /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libswscale.a; sourceTree = "<group>"; };
-		B687529626FAFCFA00B095ED /* TTXSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TTXSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,7 +223,7 @@
 				8DAF5A0722BB193A00FA357D /* VideoToolbox.framework in Frameworks */,
 				B687527326FAFA7F00B095ED /* libavformat.a in Frameworks */,
 				B687527526FAFA7F00B095ED /* libswresample.a in Frameworks */,
-				B687529726FAFCFA00B095ED /* TTXSDK.framework in Frameworks */,
+				B64176A6280EB6EA007FFAA9 /* TTXSDK.framework in Frameworks */,
 				B687527226FAFA7F00B095ED /* libavcodec.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,8 +252,8 @@
 		18912D0817FAB67600BEA969 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B64176A5280EB6EA007FFAA9 /* TTXSDK.framework */,
 				8DAF5A0622BB193A00FA357D /* VideoToolbox.framework */,
-				B687529626FAFCFA00B095ED /* TTXSDK.framework */,
 				8D326D1222C2069D0020B8D3 /* libz.tbd */,
 				8D326D1022C206590020B8D3 /* libc++.tbd */,
 				8D326D1422C206D30020B8D3 /* libiconv.tbd */,
