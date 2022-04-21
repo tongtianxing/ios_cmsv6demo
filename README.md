@@ -1,3 +1,6 @@
+20220421
+1.TTXSDK bitcode支持 
+
 20220419
 1.实时视频屏幕比例设置
 
@@ -28,6 +31,9 @@
 20190708  
 1.集成最新TTXSDK,完善接口说明文档
 2.缩减sdk的大小
+
+20220421
+1.TTXSDK bitcode Enable
 
 20220419
 1. Real-time video screen ratio setting
